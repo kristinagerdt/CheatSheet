@@ -14,7 +14,7 @@ public class MyHashSet {
     private static void methodsSet() {
         List<String> list = Arrays.asList("aa", "aa", "ab", "ac", "bb", "pp");
         Set<String> set = new HashSet<>(list);
-        System.out.println(set);
+        System.out.println(set); // order is not guaranteed
 
         boolean isAdd = set.add("vv");
         set.addAll(Arrays.asList("vv", "ff"));

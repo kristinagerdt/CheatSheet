@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class map {
+public class Map {
     public static void main(String[] args) {
         Collection<String> stringCollection = Arrays.asList("a1", "a2", "a3", "a4");
         // map

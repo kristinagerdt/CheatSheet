@@ -7,10 +7,10 @@ import java.util.stream.Stream;
 
 public class BuildStream {
     public static void main(String[] args) {
-        //best practice
+        // best practice
         Collection<Integer> collection = Arrays.asList(4, 5, 7, 6, 1);
         Stream<Integer> streamFromCollection = collection.stream();
-//        System.out.println(streamFromCollection.collect(Collectors.toList()));
+        // System.out.println(streamFromCollection.collect(Collectors.toList()));
         Stream<Integer> parallelStreamFromCollection = collection.parallelStream();
 
         Integer[] array = new Integer[]{4, 5, 7, 8, 9, 6, 1};
