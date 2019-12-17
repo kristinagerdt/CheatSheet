@@ -1,4 +1,4 @@
-package interFace.transformer;
+package transformer.interFace;
 
 public class Main {
     public static void main(String[] args) {

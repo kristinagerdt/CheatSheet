@@ -1,4 +1,4 @@
-package stream;
+package stream.methods;
 
 import java.util.Arrays;
 import java.util.Collection;

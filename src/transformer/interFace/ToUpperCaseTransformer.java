@@ -1,13 +1,13 @@
-package abstraction.transformer;
+package transformer.interFace;
 
-public class ToUpperCaseTransformer extends AbstractTransformer {
+public class ToUpperCaseTransformer implements InterfaceTransformer {
     @Override
     public boolean checkLength(String str) {
         return str.length() == 3;
     }
 
     @Override
-    public String transformString(String str) {
+    public String transform(String str) {
         return str.toUpperCase();
     }
 }

@@ -1,4 +1,4 @@
-package interFace.transformer;
+package transformer.interFace;
 
 public interface InterfaceTransformer {
     public abstract boolean checkLength(String str);

@@ -1,4 +1,4 @@
-package abstraction.transformer;
+package transformer.abstraction;
 
 public abstract class AbstractTransformer {
     public abstract boolean checkLength(String str);

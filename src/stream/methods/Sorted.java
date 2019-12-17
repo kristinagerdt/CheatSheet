@@ -1,4 +1,4 @@
-package stream;
+package stream.methods;
 
 import stream.helper.Person;
 import stream.helper.Sex;
@@ -10,6 +10,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Sorted {
+    // .sorted()
+    // .sorted(Comparator.naturalOrder())
+    // .sorted(Comparator.reverseOrder())
+    // .sorted((o1, o2) -> -o1.compareTo(o2))
+    // .sorted((o1, o2) -> -o1.compareTo(o2))
+
+    // .sorted((o1, o2) -> -o1.getName().compareTo(o2.getName()))
+    // .sorted(Comparator.comparing(Person::getSex).reversed())
+    // .sorted(Comparator.comparing(Person::getSex).thenComparing(Person::getAge))
+
     public static void main(String[] args) {
         Collection<String> collection = Arrays.asList("a1", "a4", "a3", "a2", "a1", "a4");
 

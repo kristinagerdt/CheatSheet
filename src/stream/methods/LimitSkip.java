@@ -1,11 +1,15 @@
-package stream;
+package stream.methods;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class LimitAndSkip {
+public class LimitSkip {
+    // .limit(2)
+    // .skip(1)
+    // .skip(collection.size() - 1)
+
     public static void main(String[] args) {
         Collection<String> collection = Arrays.asList("a1", "a2", "a3", "a1");
 

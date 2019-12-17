@@ -1,4 +1,4 @@
-package stream;
+package stream.methods;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -6,6 +6,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Map {
+    // .map(i -> i + "_1")
+    // .map(i -> Integer.parseInt(i.substring(1)))
+    // .mapToInt(i -> Integer.parseInt(i.substring(1)))
+    // .flatMap(i -> Arrays.stream(i.split(",")))
+    // .flatMapToInt(i -> Arrays.stream(i.split(",")).mapToInt(Integer::parseInt))
+    // .mapToInt(Integer::parseInt)
+
     public static void main(String[] args) {
         Collection<String> stringCollection = Arrays.asList("a1", "a2", "a3", "a4");
         // map
