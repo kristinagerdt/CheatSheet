@@ -1,6 +1,6 @@
 package transformer.abstraction;
 
-public class ToUpperCaseTransformer extends AbstractTransformer {
+public class ToUpperCaseTransformer extends TransformerAbstract {
     @Override
     public boolean checkLength(String str) {
         return str.length() == 3;

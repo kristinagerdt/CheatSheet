@@ -5,14 +5,14 @@ public class Main {
         String str = "abCd aad BBEF bef abb Fg";
         System.out.println(str);
 
-        AbstractTransformer transformerUp = new ToUpperCaseTransformer();
+        TransformerAbstract transformerUp = new ToUpperCaseTransformer();
         System.out.println(transform(str, transformerUp));
 
-        AbstractTransformer transformerLow = new ToLowerCaseTransformer();
+        TransformerAbstract transformerLow = new ToLowerCaseTransformer();
         System.out.println(transform(str, transformerLow));
     }
 
-    private static String transform(String input, AbstractTransformer transformer) {
+    private static String transform(String input, TransformerAbstract transformer) {
         String[] words = input.split(" ");
         StringBuilder result = new StringBuilder();
         for (String item : words) {

@@ -1,6 +1,6 @@
 package transformer.abstraction;
 
-public class ToLowerCaseTransformer extends AbstractTransformer {
+public class ToLowerCaseTransformer extends TransformerAbstract {
     @Override
     public boolean checkLength(String str) {
         return str.length() == 4;

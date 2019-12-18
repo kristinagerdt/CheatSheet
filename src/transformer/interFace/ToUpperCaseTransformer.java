@@ -1,6 +1,6 @@
 package transformer.interFace;
 
-public class ToUpperCaseTransformer implements InterfaceTransformer {
+public class ToUpperCaseTransformer implements TransformerInterface {
     @Override
     public boolean checkLength(String str) {
         return str.length() == 3;

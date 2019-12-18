@@ -1,6 +1,9 @@
 package functionalInterface.comparator;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public class Examples {
     public static void main(String[] args) {
