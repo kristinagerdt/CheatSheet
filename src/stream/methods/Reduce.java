@@ -3,7 +3,7 @@ package stream.methods;
 import java.util.Arrays;
 import java.util.Collection;
 
-public class ReduceMaxMin {
+public class Reduce {
     // .reduce((o1, o2) -> o1 + o2)
     // .reduce(Integer::sum)
     // .reduce(Integer::max)

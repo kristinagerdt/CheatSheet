@@ -9,8 +9,8 @@ public class MaxMin {
     // .min(Integer::compareTo)
     // .reduce(Integer::max)
     // .reduce(Integer::min)
-    //  .collect(Collectors.summarizingInt(i -> i)).getMax();
-    //  .collect(Collectors.summarizingInt(i -> i)).getMin();
+    // .collect(Collectors.summarizingInt(i -> i)).getMax();
+    // .collect(Collectors.summarizingInt(i -> i)).getMin();
 
     public static void main(String[] args) {
         Integer[] array = {1, 2, 5, 6, 4, 7, 8};
