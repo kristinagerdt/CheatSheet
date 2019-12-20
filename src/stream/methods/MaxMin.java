@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 public class MaxMin {
     // .max(Integer::compareTo)
     // .min(Integer::compareTo)
-    // .reduce(Integer::max)
-    // .reduce(Integer::min)
+    // .reduce(0, Integer::max)
+    // .reduce(Integer::min);
     // .collect(Collectors.summarizingInt(i -> i)).getMax();
     // .collect(Collectors.summarizingInt(i -> i)).getMin();
 
@@ -26,8 +26,7 @@ public class MaxMin {
         // get the maximum value from collection using .reduce()
         Integer maxReduce = collection
                 .stream()
-                .reduce(Integer::max)
-                .get();
+                .reduce(0, Integer::max);
         System.out.println("maxReduce = " + maxReduce);
 
         // get the maximum value from collection using Collectors

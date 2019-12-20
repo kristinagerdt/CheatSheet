@@ -1,9 +1,8 @@
 package stream.test;
 
-import java.util.IntSummaryStatistics;
+
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -60,88 +59,113 @@ public class Task {
                 .reduce(0, Integer::sum);
     }
 
-
     public static List<Integer> skip(List<Integer> integers, Integer toSkip) {
-        return null;
+        return integers
+                .stream()
+                .skip(toSkip)
+                .collect(Collectors.toList());
     }
 
     public static List<String> getFirstNames(List<String> names) {
-        return null;
+        return names
+                .stream()
+                .map(s -> s.split(" "))
+                .map(s -> s[0])
+                .collect(Collectors.toList());
     }
 
     public static List<String> getDistinctLetters(List<String> names) {
-        return null;
+        return names
+                .stream()
+                .flatMap(s -> Arrays.stream(s.split("")))
+                .distinct()
+                .collect(Collectors.toList());
     }
 
     public static String separateNamesByComma(List<User> users) {
-        return null;
+        return users
+                .stream()
+                .map(User::getName)
+                .collect(Collectors.joining(", "));
     }
 
     public static Integer getMinAge(List<User> users) {
-        return null;
+        return users
+                .stream()
+                .map(User::getAge)
+                .reduce(Integer::min)
+                .orElse(0);
     }
 
     public static Integer getMaxAge(List<User> users) {
-        return null;
+        return users
+                .stream()
+                .map(User::getAge)
+                .max(Integer::compareTo)
+                .orElse(0);
     }
 
     public static double getAverageAge(List<User> users) {
-        return 0.0;
+        return users
+                .stream()
+                .map(User::getAge)
+                .collect(Collectors.summarizingDouble(u -> u))
+                .getAverage();
     }
 
-    public static Map<Boolean, List<User>> partionUsersByGender(List<User> users) {
-        return null;
-    }
-
-    public static Map<Integer, List<User>> groupByAge(List<User> users) {
-        return null;
-    }
-
-    public static Map<Boolean, Map<Integer, List<User>>> groupByGenderAndAge(List<User> users) {
-        return null;
-    }
-
-    public static Map<Boolean, Long> countGender(List<User> users) {
-        return null;
-    }
-
-    public static boolean anyMatch(List<User> users, int age) {
-        return false;
-    }
-
-    public static boolean noneMatch(List<User> users, int age) {
-        return false;
-    }
-
-    public static Optional<User> findAny(List<User> users, String name) {
-        return null;
-    }
-
-    public static List<User> sortByAge(List<User> users) {
-        return null;
-    }
-
-    public static User findOldest(List<User> users) {
-        return null;
-    }
-
-    public static int sumAge(List<User> users) {
-        return 0;
-    }
-
-    public static IntSummaryStatistics ageSummaryStatistics(List<User> users) {
-        return null;
-    }
-
-    public static Stream<Integer> getBoxedStream(IntStream stream) {
-        return null;
-    }
-
-    public static List<Integer> generate10RandomNumbers() {
-        return null;
-    }
-
-    public static List<Integer> generateFirst10PrimeNumbers() {
-        return null;
-    }
+//    public static Map<Boolean, List<User>> partionUsersByGender(List<User> users) {
+//        return null;
+//    }
+//
+//    public static Map<Integer, List<User>> groupByAge(List<User> users) {
+//        return null;
+//    }
+//
+//    public static Map<Boolean, Map<Integer, List<User>>> groupByGenderAndAge(List<User> users) {
+//        return null;
+//    }
+//
+//    public static Map<Boolean, Long> countGender(List<User> users) {
+//        return null;
+//    }
+//
+//    public static boolean anyMatch(List<User> users, int age) {
+//        return false;
+//    }
+//
+//    public static boolean noneMatch(List<User> users, int age) {
+//        return false;
+//    }
+//
+//    public static Optional<User> findAny(List<User> users, String name) {
+//        return null;
+//    }
+//
+//    public static List<User> sortByAge(List<User> users) {
+//        return null;
+//    }
+//
+//    public static User findOldest(List<User> users) {
+//        return null;
+//    }
+//
+//    public static int sumAge(List<User> users) {
+//        return 0;
+//    }
+//
+//    public static IntSummaryStatistics ageSummaryStatistics(List<User> users) {
+//        return null;
+//    }
+//
+//    public static Stream<Integer> getBoxedStream(IntStream stream) {
+//        return null;
+//    }
+//
+//    public static List<Integer> generate10RandomNumbers() {
+//        return null;
+//    }
+//
+//    public static List<Integer> generateFirst10PrimeNumbers() {
+//        return null;
+//    }
 }
