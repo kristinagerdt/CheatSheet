@@ -1,6 +1,6 @@
 package stream.helper;
 
-public enum Sex {
+public enum Gender {
     MAN,
     WOMAN
 }

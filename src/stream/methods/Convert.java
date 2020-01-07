@@ -9,7 +9,6 @@ public class Convert {
     // .map(Double::intValue)
 
     public static void main(String[] args) {
-
         // convert to Integer from Double using Double.intValue()
         List<Integer> numbers = asList(1, 4, 16, 256);
         List<Integer> doubleToInt = numbers

@@ -1,20 +1,35 @@
 package stream.methods;
 
+import stream.helper.Person;
+import stream.helper.Gender;
+
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.stream.Collectors;
 
 public class MaxMin {
     // .max(Integer::compareTo)
     // .min(Integer::compareTo)
+    // .max(Comparator.comparing(Person::getAge));
+    // .min(Comparator.comparing(Person::getAge));
     // .reduce(0, Integer::max)
     // .reduce(Integer::min);
     // .collect(Collectors.summarizingInt(i -> i)).getMax();
     // .collect(Collectors.summarizingInt(i -> i)).getMin();
 
     public static void main(String[] args) {
+        // max returns the maximum element, using a comparator as a condition
+        // min returns the minimum element, using a comparator as a condition
+
         Integer[] array = {1, 2, 5, 6, 4, 7, 8};
         Collection<Integer> collection = Arrays.asList(array);
+
+        Collection<Person> people = Arrays.asList(
+                new Person("Mark", 23, Gender.MAN, true),
+                new Person("Alex", 23, Gender.MAN, true),
+                new Person("Helen", 42, Gender.WOMAN, true),
+                new Person("Stephan", 69, Gender.MAN, false));
 
         // get the maximum value from collection using .max()
         Integer max = collection
@@ -22,6 +37,13 @@ public class MaxMin {
                 .max(Integer::compareTo)
                 .orElse(Integer.MAX_VALUE);
         System.out.println("max = " + max);
+
+        // find the oldest person
+        Person oldestPerson = people
+                .stream()
+                .max(Comparator.comparing(Person::getAge))
+                .get();
+        System.out.println("oldestPerson " + oldestPerson);
 
         // get the maximum value from collection using .reduce()
         Integer maxReduce = collection
@@ -42,6 +64,13 @@ public class MaxMin {
                 .min(Integer::compareTo)
                 .orElse(Integer.MIN_VALUE);
         System.out.println("min = " + min);
+
+        // find the youngest person
+        Person youngestPerson = people
+                .stream()
+                .min(Comparator.comparing(Person::getAge))
+                .get();
+        System.out.println("youngestPerson " + youngestPerson);
 
         // get the minimum value from collection using .reduce()
         Integer minReduce = collection

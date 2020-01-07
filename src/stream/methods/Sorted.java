@@ -1,7 +1,7 @@
 package stream.methods;
 
 import stream.helper.Person;
-import stream.helper.Sex;
+import stream.helper.Gender;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -14,11 +14,9 @@ public class Sorted {
     // .sorted(Comparator.naturalOrder())
     // .sorted(Comparator.reverseOrder())
     // .sorted((o1, o2) -> -o1.compareTo(o2))
-    // .sorted((o1, o2) -> -o1.compareTo(o2))
-
     // .sorted((o1, o2) -> -o1.getName().compareTo(o2.getName()))
-    // .sorted(Comparator.comparing(Person::getSex).reversed())
-    // .sorted(Comparator.comparing(Person::getSex).thenComparing(Person::getAge))
+    // .sorted(Comparator.comparing(Person::getGender).reversed())
+    // .sorted(Comparator.comparing(Person::getGender).thenComparing(Person::getAge))
 
     public static void main(String[] args) {
         Collection<String> collection = Arrays.asList("a1", "a4", "a3", "a2", "a1", "a4");
@@ -61,10 +59,10 @@ public class Sorted {
 
         // work with the objects
         Collection<Person> people = Arrays.asList(
-                new Person("Mark", 16, Sex.MAN),
-                new Person("Alex", 23, Sex.MAN),
-                new Person("Helen", 42, Sex.WOMAN),
-                new Person("Stephan", 69, Sex.MAN));
+                new Person("Mark", 23, Gender.MAN, true),
+                new Person("Alex", 23, Gender.MAN, true),
+                new Person("Helen", 42, Gender.WOMAN, true),
+                new Person("Stephan", 69, Gender.MAN, false));
 
         // sort by name in reverse alphabetical order
         List<Person> sortedByNameReversed = people
@@ -84,28 +82,28 @@ public class Sorted {
         System.out.println("sortedByNameReversedComparator = " + sortedByNameReversedComparator);
 
         // sort by name in reverse alphabetical order using Comparator.comparing()
-        Comparator<Person> comparatorBySex = Comparator.comparing(Person::getSex);
+        Comparator<Person> comparatorByGender = Comparator.comparing(Person::getGender);
 
-        List<Person> sortedBySexReversedComparator = people
+        List<Person> sortedByGenderReversedComparator = people
                 .stream()
-                .sorted(comparatorBySex.reversed())
+                .sorted(comparatorByGender.reversed())
                 .collect(Collectors.toList());
-        System.out.println("sortedBySexReversedComparator = " + sortedBySexReversedComparator);
+        System.out.println("sortedByGenderReversedComparator = " + sortedByGenderReversedComparator);
 
-        // sort by Sex and then by Age
-        List<Person> sortedBySexAndAge = people
+        // sort by Gender and then by Age
+        List<Person> sortedByGenderAndAge = people
                 .stream()
-                .sorted((o1, o2) -> o1.getSex() != o1.getSex() ? o1.getSex().compareTo(o2.getSex()) : o1.getAge().compareTo(o2.getAge()))
+                .sorted((o1, o2) -> o1.getGender() != o1.getGender() ? o1.getGender().compareTo(o2.getGender()) : o1.getAge().compareTo(o2.getAge()))
                 .collect(Collectors.toList());
-        System.out.println("sortedBySexAndAge = " + sortedBySexAndAge);
+        System.out.println("sortedByGenderAndAge = " + sortedByGenderAndAge);
 
         // sort by Sex and then by Age using Comparator.comparing().thenComparing
-        Comparator<Person> comparatorBySexAndAge = Comparator.comparing(Person::getSex).thenComparing(Person::getAge);
+        Comparator<Person> comparatorByGenderAndAge = Comparator.comparing(Person::getGender).thenComparing(Person::getAge);
 
-        List<Person> sortedBySexAndAgeComparator = people
+        List<Person> sortedByGenderAndAgeComparator = people
                 .stream()
-                .sorted(Comparator.comparing(Person::getSex).thenComparing(Person::getAge))
+                .sorted(Comparator.comparing(Person::getGender).thenComparing(Person::getAge))
                 .collect(Collectors.toList());
-        System.out.println("sortedBySexAndAgeComparator = " + sortedBySexAndAgeComparator);
+        System.out.println("sortedByGenderAndAgeComparator = " + sortedByGenderAndAgeComparator);
     }
 }

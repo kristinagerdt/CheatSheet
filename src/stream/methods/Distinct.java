@@ -10,6 +10,7 @@ public class Distinct {
     public static void main(String[] args) {
         // distinct
         // the order is guaranteed
+
         Collection<String> collection = Arrays.asList("a1", "a2", "a2", "a3", "a1", "a2", "a2");
         List<String> collectionWithoutReplays = collection
                 .stream()

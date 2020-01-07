@@ -3,12 +3,14 @@ package stream.helper;
 public class Person {
     private final String name;
     private final Integer age;
-    private final Sex sex;
+    private final Gender gender;
+    private final boolean isAlive;
 
-    public Person(String name, Integer age, Sex sex) {
+    public Person(String name, Integer age, Gender gender, boolean isAlive) {
         this.name = name;
         this.age = age;
-        this.sex = sex;
+        this.gender = gender;
+        this.isAlive = isAlive;
     }
 
     public String getName() {
@@ -19,8 +21,12 @@ public class Person {
         return age;
     }
 
-    public Sex getSex() {
-        return sex;
+    public Gender getGender() {
+        return gender;
+    }
+
+    public boolean isAlive() {
+        return isAlive;
     }
 
     @Override
@@ -28,7 +34,8 @@ public class Person {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", sex=" + sex +
+                ", gender=" + gender +
+                ", isAlive=" + isAlive +
                 '}';
     }
 }
