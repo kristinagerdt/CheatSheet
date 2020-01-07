@@ -10,7 +10,9 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertNotNull;
 
 public class TaskTest {
 
@@ -110,7 +112,7 @@ public class TaskTest {
         User maggie = new User("Maggie", false);
         User lisa = new User("Lisa", false);
         List<User> input = asList(homer, bart, maggie, lisa);
-        Map<Boolean, List<User>> result = Task.partionUsersByGender(input);
+        Map<Boolean, List<User>> result = Task.partitionUsersByGender(input);
         assertEquals(result.get(true), asList(homer, bart));
         assertEquals(result.get(false), asList(maggie, lisa));
     }
