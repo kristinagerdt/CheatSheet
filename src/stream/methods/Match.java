@@ -60,5 +60,12 @@ public class Match {
                 .stream()
                 .noneMatch("a7"::equals);
         System.out.println("not a single 'a7' element exists? " + result3);
+
+        String test = "24";
+        // check if string is a number
+        boolean isDigit = test
+                .chars()
+                .allMatch(Character::isDigit);
+        System.out.println(test + " is digit? " + isDigit);
     }
 }

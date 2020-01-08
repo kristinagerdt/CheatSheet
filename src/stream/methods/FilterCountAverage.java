@@ -3,6 +3,7 @@ package stream.methods;
 import stream.helper.Person;
 import stream.helper.Gender;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -64,6 +65,15 @@ public class FilterCountAverage {
                         || (p.getGender() == Gender.MAN && p.getAge() < 60))
                 .count();
         System.out.println("countOfWorkingPeople = " + countOfWorkingPeople);
+
+        String sentence = "dhgfj sdhfg ss ght ww vaa vdvd";
+        // count the number of words starting with s
+        List<String> strings = new ArrayList<>(Arrays.asList(sentence.split(" ")));
+        long wordsWithS = strings
+                .stream()
+                .filter(s -> s.startsWith("s"))
+                .count();
+        System.out.println("wordsWithS = " + wordsWithS);
 
         // find the average age among men
         double menAverageAge = people
