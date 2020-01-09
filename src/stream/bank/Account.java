@@ -1,16 +1,16 @@
 package stream.bank;
 
 public class Account {
-    private String IBANN;
+    private String iban;
     private Currency currency;
 
-    public Account(String IBANN, Currency currency) {
-        this.IBANN = IBANN;
+    public Account(String iban, Currency currency) {
+        this.iban = iban;
         this.currency = currency;
     }
 
-    public String getIBANN() {
-        return IBANN;
+    public String getIban() {
+        return iban;
     }
 
     public Currency getCurrency() {
@@ -19,6 +19,6 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account{IBANN=" + IBANN + ", currency=" + currency + '}';
+        return "Account{iban=" + iban + ", currency=" + currency + '}';
     }
 }

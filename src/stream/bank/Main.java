@@ -37,8 +37,8 @@ public class Main {
         System.out.println(getDistinctNames(people));
         System.out.println(groupingPeopleByAge(people));
         System.out.println(groupingPeopleByName(people));
-        System.out.println(getIBANNs(accounts));
-        System.out.println(getIBANNsFromPeople(people));
+        System.out.println(getIbans(accounts));
+        System.out.println(getIbansFromPeople(people));
         System.out.println(getSumAgePeopleOlder17(people));
         System.out.println(getPeopleOlder17(people));
     }
@@ -72,20 +72,20 @@ public class Main {
         //.collect(Collectors.groupingBy(Person::getName));
     }
 
-    public static List<String> getIBANNs(List<Account> accounts) {
+    public static List<String> getIbans(List<Account> accounts) {
         return accounts
                 .stream()
-                .map(Account::getIBANN)
-                .map(Main::getHiddenIBANN)
+                .map(Account::getIban)
+                .map(Main::getHiddenIban)
                 .collect(Collectors.toList());
     }
 
-    public static List<String> getIBANNsFromPeople(List<Person> people) {
+    public static List<String> getIbansFromPeople(List<Person> people) {
         return people
                 .stream()
                 .flatMap(person -> person.getAccounts().stream())
-                .map(Account::getIBANN)
-                .map(Main::getHiddenIBANN)
+                .map(Account::getIban)
+                .map(Main::getHiddenIban)
                 .collect(Collectors.toList());
     }
 
@@ -105,7 +105,7 @@ public class Main {
                 .collect(Collectors.joining(", ", "In Germany ", " are of legal age."));
     }
 
-    private static String getHiddenIBANN(String IBANN) {
-        return IBANN.substring(0, 3) + IBANN.substring(3).replaceAll("\\w", "*");
+    private static String getHiddenIban(String iban) {
+        return iban.substring(0, 3) + iban.substring(3).replaceAll("\\w", "*");
     }
 }
