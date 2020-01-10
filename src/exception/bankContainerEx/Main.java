@@ -1,4 +1,4 @@
-package exception.bank;
+package exception.bankContainerEx;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,11 +15,11 @@ public class Main {
         Collections.addAll(customers, c1, c2, c3, c4);
 
         for (Customer c : customers) {
-            System.out.println(validateCustomer(c));
+            System.out.println(validate(c));
         }
     }
 
-    public static String validateCustomer(Customer customer) {
+    public static String validate(Customer customer) {
         List<String> information = new ArrayList<>();
         information.add(customer.getName());
 
