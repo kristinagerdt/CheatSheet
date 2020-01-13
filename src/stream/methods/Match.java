@@ -1,7 +1,7 @@
 package stream.methods;
 
-import stream.helper.Gender;
-import stream.helper.Person;
+import stream.entity.Gender;
+import stream.entity.Person;
 
 import java.util.Arrays;
 import java.util.Collection;

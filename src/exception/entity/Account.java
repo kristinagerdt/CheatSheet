@@ -1,4 +1,4 @@
-package exception.bankContainerEx;
+package exception.entity;
 
 public class Account {
     private String iban;

@@ -1,4 +1,4 @@
-package stream.helper;
+package stream.entity;
 
 public enum Gender {
     MAN,

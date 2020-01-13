@@ -1,4 +1,4 @@
-package exception.bankCustomEx;
+package exception.bankCustom;
 
 public class UnderageCustomerException extends Exception {
     private int age;

@@ -1,4 +1,4 @@
-package stream.helper;
+package stream.entity;
 
 public class Person {
     private final String name;

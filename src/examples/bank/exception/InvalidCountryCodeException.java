@@ -1,4 +1,4 @@
-package exception.bankCustomEx;
+package examples.bank.exception;
 
 public class InvalidCountryCodeException extends Exception {
     private String countryCode;

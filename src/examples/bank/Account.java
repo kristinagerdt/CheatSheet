@@ -1,4 +1,4 @@
-package exception.bankCustomEx;
+package examples.bank;
 
 public class Account {
     private String iban;
@@ -13,6 +13,6 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account{iban=" + iban + '}';
+        return "Account{iban=" + iban + "}";
     }
 }

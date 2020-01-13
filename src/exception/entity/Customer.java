@@ -1,4 +1,4 @@
-package exception.bankCustomEx;
+package exception.entity;
 
 public class Customer {
     private String name;

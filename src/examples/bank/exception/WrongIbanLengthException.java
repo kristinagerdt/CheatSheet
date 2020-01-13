@@ -1,4 +1,4 @@
-package exception.bankCustomEx;
+package examples.bank.exception;
 
 public class WrongIbanLengthException extends Exception {
     private int ibanLength;
