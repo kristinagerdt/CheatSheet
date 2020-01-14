@@ -4,38 +4,38 @@ import java.util.Scanner;
 import java.util.function.Supplier;
 
 public class Hello {
-    public static void main(String[] args) {
-//        hello();
-//
-//        variables();
-//
-//        conditionalIf(1, 2);
-//        conditionalIf(2, 1);
-//        conditionalIf(2, 2);
+    public static void main(String[] args) throws IOException {
+        hello();
 
-//        conditionalSwitch(1);
-//        conditionalSwitch(2);
-//        conditionalSwitch(3);
+        variables();
 
-//        loopFor(args);
+        conditionalIf(1, 2);
+        conditionalIf(2, 1);
+        conditionalIf(2, 2);
 
-//        loopWhile();
+        conditionalSwitch(1);
+        conditionalSwitch(2);
+        conditionalSwitch(3);
 
-//        loopDoWhile();
+        loopFor(args);
 
-//        consoleRead();
+        loopWhile();
 
-//        random();
+        loopDoWhile();
 
-//        array();
+        consoleRead();
 
-//        string();
+        random();
 
-//        bitwiseOperations();
+        array();
 
-//        shearOperations();
+        string();
 
-//        ternaryOperator();
+        bitwiseOperations();
+
+        shearOperations();
+
+        ternaryOperator();
 
         varargs(1, 2, 3);
         varargs(4, 5);
