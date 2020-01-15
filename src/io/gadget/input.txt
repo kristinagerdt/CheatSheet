@@ -1,0 +1,5 @@
+Alex,Grey,Notebook Lenovo,500
+Max,Stone,Apple MacBook,800
+Alex,Grey,Keyboard Cherry,25
+Anna,Smith,Mouse Logitech,5
+Max,Stone,Apple Touchpad,60

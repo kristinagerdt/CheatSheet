@@ -19,7 +19,7 @@ public class Sorted {
     // .sorted(Comparator.comparing(Person::getGender).thenComparing(Person::getAge))
 
     public static void main(String[] args) {
-        Collection<String> collection = Arrays.asList("a1", "a4", "a3", "a2", "a1", "a4");
+        Collection<String> collection = Arrays.asList("aa1", "a444", "adfg3", "ahyyy2", "a10", "a4");
 
         // sort by alphabet using .sorted()
         List<String> sorted = collection
@@ -56,6 +56,13 @@ public class Sorted {
                 .sorted(Comparator.reverseOrder())
                 .collect(Collectors.toList());
         System.out.println("sortedReverseComparator = " + sortedReverseComparator);
+
+        // sort by length of string using .sorted(Comparator.comparing())
+        List<String> sortedByLength = collection
+                .stream()
+                .sorted(Comparator.comparing(String::length))
+                .collect(Collectors.toList());
+        System.out.println("sortedByLength = " + sortedByLength);
 
         // work with the objects
         Collection<Person> people = Arrays.asList(
