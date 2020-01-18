@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-public class Main {
+public class Demo {
     public static void main(String[] args) {
         List<Integer> integers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 7, 8, 9));
 
