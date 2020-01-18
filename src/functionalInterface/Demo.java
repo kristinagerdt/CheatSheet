@@ -5,7 +5,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-public class Examples {
+public class Demo {
     public static void main(String[] args) {
         //input - 1 String, output - 2 String
         Function<String, String> function = s -> s.toUpperCase(); //String::toUpperCase;

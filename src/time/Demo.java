@@ -27,8 +27,13 @@ public class Demo {
         LocalDate parsedDate = LocalDate.parse("2020-01-17");
         System.out.println("parsedDate: " + parsedDate);
 
-        LocalDate dateFormat = LocalDate.parse("17-01-2020", DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-        System.out.println("dateFormat: " + dateFormat);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String formattedDate = formatter.format(parsedDate);
+        System.out.println("formattedDate: " + formattedDate);
+
+        LocalDate formatterParsedDate = LocalDate.parse("17-01-2020", DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        //LocalDate formatterParsedDate = LocalDate.parse("17-01-2020", formatter);
+        System.out.println("formatterParsedDate: " + formatterParsedDate);
 
         DayOfWeek dayOfWeek = LocalDate.parse("2020-01-17").getDayOfWeek();
         System.out.println("dayOfWeek " + dayOfWeek);

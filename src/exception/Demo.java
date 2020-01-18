@@ -3,7 +3,7 @@ package exception;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Examples {
+public class Demo {
     // 1. try-catch in the code where the error can occur
     // 2. throw new Exception in the code where the error can occur
     // 3. throw Exception after (String[] args), only catchable Exceptions
