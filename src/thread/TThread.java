@@ -7,13 +7,13 @@ public class TThread extends Thread {
 
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + " started");
+        System.out.println(getName() + " started");
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
-            System.out.println("Thread has been interrupted");
+            System.out.println(getName() + " has been interrupted");
         }
-        System.out.println(Thread.currentThread().getName() + " finished");
+        System.out.println(getName() + " finished");
     }
 
     public static void main(String[] args) {

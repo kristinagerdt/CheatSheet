@@ -3,13 +3,14 @@ package thread;
 public class RThread implements Runnable {
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + " started");
+        String threadName = Thread.currentThread().getName();
+        System.out.println(threadName + " started");
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
-            System.out.println("Thread has been interrupted");
+            System.out.println(threadName + " has been interrupted");
         }
-        System.out.println(Thread.currentThread().getName() + " finished");
+        System.out.println(threadName + " finished");
     }
 
     public static void main(String[] args) {
