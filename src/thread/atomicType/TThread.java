@@ -1,4 +1,4 @@
-package thread.atomic;
+package thread.atomicType;
 
 import java.time.Instant;
 import java.util.concurrent.atomic.AtomicLong;
