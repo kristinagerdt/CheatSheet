@@ -1,4 +1,4 @@
-package thread.waitNotify;
+package thread.waitNotify.store;
 
 public class Store {
     private int product = 0;

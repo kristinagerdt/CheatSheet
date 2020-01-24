@@ -1,4 +1,4 @@
-package thread.waitNotify;
+package thread.waitNotify.store;
 
 class Consumer implements Runnable {
     private Store store;

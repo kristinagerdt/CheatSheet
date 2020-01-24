@@ -1,4 +1,4 @@
-package thread.waitNotify;
+package thread.waitNotify.store;
 
 public class Main {
     public static void main(String[] args) {

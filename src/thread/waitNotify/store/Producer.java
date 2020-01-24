@@ -1,4 +1,4 @@
-package thread.waitNotify;
+package thread.waitNotify.store;
 
 class Producer implements Runnable {
     private Store store;
