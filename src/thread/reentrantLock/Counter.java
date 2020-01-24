@@ -1,4 +1,4 @@
-package thread.lock;
+package thread.reentrantLock;
 
 import java.time.Instant;
 import java.util.concurrent.locks.ReentrantLock;
@@ -10,7 +10,7 @@ public class Counter extends Thread {
     private static long count2 = 0;
     private int nRuns;
 
-    private static ReentrantLock lock = new ReentrantLock();
+    private static ReentrantLock locker = new ReentrantLock();
 
     public Counter(int nRuns) {
         this.nRuns = nRuns;
@@ -25,20 +25,20 @@ public class Counter extends Thread {
     }
 
     private void putCount1(int number) {
-        lock.lock();
+        locker.lock();
         try {
             count1 += number;
         } finally {
-            lock.unlock();
+            locker.unlock();
         }
     }
 
     private void putCount2(int number) {
-        lock.lock();
+        locker.lock();
         try {
             count2 += number;
         } finally {
-            lock.unlock();
+            locker.unlock();
         }
     }
 
