@@ -43,8 +43,8 @@ public class Printer extends Thread {
         } catch (InterruptedException e) {
             System.out.println("Thread has been interrupted");
         }
-        Instant finish = Instant.now();
-        System.out.println("Time: " + MILLIS.between(start, finish));
+        Instant stop = Instant.now();
+        System.out.println("Time: " + MILLIS.between(start, stop));
         System.out.println("Main thread finished");
 
         /* Main thread started
