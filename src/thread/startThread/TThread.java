@@ -1,4 +1,4 @@
-package thread;
+package thread.startThread;
 
 public class TThread extends Thread {
     public TThread(String name) {
