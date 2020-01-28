@@ -6,12 +6,12 @@ import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Demo {
+public class DateFormat {
     private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 
     public static void main(String[] args) {
         String date = "2018-06-22T10:00:00";
-        ExecutorService executorService = Executors.newFixedThreadPool(2); // 1
+        ExecutorService pool = Executors.newFixedThreadPool(2); // 1
         Runnable task = new Runnable() {
             @Override
             public void run() {
@@ -19,9 +19,9 @@ public class Demo {
             }
         };
         for (int i = 0; i < 100; i++) {
-            executorService.submit(task); // 2
+            pool.submit(task); // 2
         }
-        executorService.shutdown(); // 3
+        pool.shutdown(); // 3
     }
 
     private synchronized static void parseDate(String dateString) {
