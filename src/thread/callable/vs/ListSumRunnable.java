@@ -1,4 +1,4 @@
-package thread.runnableCallable;
+package thread.callable.vs;
 
 import java.util.List;
 

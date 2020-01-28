@@ -1,4 +1,4 @@
-package thread.runnableCallable;
+package thread.callable.vs;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
