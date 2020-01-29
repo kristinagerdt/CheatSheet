@@ -1,24 +1,34 @@
 package reflection;
 
 public class Person {
-    private String name;
-    private Integer age;
+    private String firstName;
+    public String lastName;
+    public int age;
+    private boolean gender; // true-female, false-male
 
-    public Person(String name, Integer age) {
-        this.name = name;
+    public Person(String firstName, String lastName, int age, boolean gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
+        this.gender = gender;
     }
 
-    public String getName() {
-        return name;
+    public Person(String firstName, String lastName, boolean gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getLastName() {
+        return lastName;
     }
 
-    @Override
-    public String toString() {
-        return "Person{name=" + name + ", age=" + age + '}';
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    private void printData() {
+        System.out.println("Person{" + firstName + " " + lastName + ", "
+                + (age > 0 ? age + " years old, " : "") + (gender ? "Woman" : "Man") + '}');
     }
 }
