@@ -62,7 +62,7 @@ public class Match {
         System.out.println("not a single 'a7' element exists? " + result3);
 
         String test = "24";
-        // check if string is a number
+        // check if examples.string is a number
         boolean isDigit = test
                 .chars()
                 .allMatch(Character::isDigit);

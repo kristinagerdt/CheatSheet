@@ -1,4 +1,4 @@
-package string;
+package examples.string;
 
 public class CircularString {
     public static void main(String[] args) {

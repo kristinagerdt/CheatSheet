@@ -57,7 +57,7 @@ public class Sorted {
                 .collect(Collectors.toList());
         System.out.println("sortedReverseComparator = " + sortedReverseComparator);
 
-        // sort by length of string using .sorted(Comparator.comparing())
+        // sort by length of examples.string using .sorted(Comparator.comparing())
         List<String> sortedByLength = collection
                 .stream()
                 .sorted(Comparator.comparing(String::length))

@@ -46,7 +46,7 @@ public class CollectToArray {
                 .collect(Collectors.toMap(names::indexOf, i -> i))
                 .forEach((k, v) -> System.out.println(k + " " + v));
 
-        // get an array of unique values from the string collection
+        // get an array of unique values from the examples.string collection
         String[] array = strings
                 .stream()
                 .distinct()

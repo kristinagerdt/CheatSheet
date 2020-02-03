@@ -33,13 +33,13 @@ public class GroupingByPartitionBy {
                 new Person("Helen", 42, Gender.WOMAN, true),
                 new Person("Stephan", 69, Gender.MAN, false));
 
-        // convert to map, grouping by the first character of the string
+        // convert to map, grouping by the first character of the examples.string
         Map<String, List<String>> groupingBy = strings
                 .stream()
                 .collect(Collectors.groupingBy(s -> s.substring(0, 1)));
         System.out.println("groupingBy = " + groupingBy);
 
-        // convert to map, grouping by the first character of the string
+        // convert to map, grouping by the first character of the examples.string
         // and take the second character as the value, combine through :
         Map<String, String> groupingByJoining = strings
                 .stream()

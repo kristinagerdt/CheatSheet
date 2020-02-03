@@ -28,5 +28,11 @@ public class Collection {
 
         int countB = Collections.frequency(list, "B");
         System.out.println("count B: " + countB);
+
+        List<String> synchronizedList = Collections.synchronizedList(list);
+        System.out.println("synchronizedList: " + synchronizedList);
+
+        List<String> unmodifiableList = Collections.unmodifiableList(list);
+        System.out.println("unmodifiableList: " + unmodifiableList);
     }
 }

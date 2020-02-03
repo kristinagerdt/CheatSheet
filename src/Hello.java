@@ -208,6 +208,14 @@ public class Hello {
         StringBuilder sb = new StringBuilder();
         sb.append("Hello! StringBuilder");
         System.out.println(sb);
+
+        String a = "examples.string a";
+        String b = new String("examples.string a");
+        String c = b.intern();
+
+        System.out.println(a == b); //false
+        System.out.println(b == c); //false
+        System.out.println(a == c); //true
     }
 
     // | & ^
