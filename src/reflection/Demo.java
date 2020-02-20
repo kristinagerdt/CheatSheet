@@ -22,6 +22,8 @@ public class Demo {
 
         // it works only with a default constructor without parameters
         // createInstanceDefaultConstructor();
+
+        System.out.println(new ObjectAnalyzer().toString(person));
     }
 
     private static void getFields(Person person) {
