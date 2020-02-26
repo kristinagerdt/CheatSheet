@@ -1,7 +1,5 @@
 package pattern.factoryMethod;
 
-// the user class does not need to know which implementation of the interface it creates,
-// this is determined by the state of other objects or by input
 public abstract class Factory {
     private int flag;
 
@@ -15,3 +13,6 @@ public abstract class Factory {
 
     public abstract Chocolate create();
 }
+
+// The user class does not need to know which implementation of the interface it creates,
+// this is determined by the state of other objects or by input
