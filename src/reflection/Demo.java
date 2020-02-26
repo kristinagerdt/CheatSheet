@@ -78,6 +78,7 @@ public class Demo {
             method.setAccessible(true);
             System.out.println("\nMethod printData()");
             method.invoke(person);
+            // Method sqrt = Math.class.getMethod("sqrt", double.class);
         } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         } finally {
