@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.function.Supplier;
 
@@ -158,6 +159,10 @@ public class Hello {
         Arrays
                 .stream(numbers)
                 .forEach(s -> System.out.print(s + " "));
+
+        Random random = new Random();
+        int randomNumber = random.nextInt(10); //0-9
+        System.out.println("randomNumber " + randomNumber);
     }
 
     private static void array() {
