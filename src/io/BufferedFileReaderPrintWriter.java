@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class BufferedReaderWriter {
+public class BufferedFileReaderPrintWriter {
     public static void main(String[] args) {
         // FileReader reader = new FileReader("file.txt");
         // BufferedReader in = new BufferedReader(reader);

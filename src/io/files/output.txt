@@ -1,1 +1,4 @@
 str1 str2 str3
+New line
+and this line
+New line too
