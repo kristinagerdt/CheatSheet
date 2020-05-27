@@ -65,6 +65,7 @@ public class MyArrayList {
         list1.set(2, 99);
         System.out.println(list1);
 
+        // from List to Array
         Integer[] integers = list1.toArray(new Integer[0]);
 
         System.out.println(Arrays.toString(list1.toArray()));
