@@ -1,11 +1,12 @@
 package examples.sort;
 
-import java.util.Arrays;
+import static examples.sort.Helper.fillRandom;
+import static examples.sort.Helper.print;
 
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] array = fillRandom();
+        int[] array = fillRandom(1, 20, 10);
         print(array);
         long startTime = System.currentTimeMillis();
         bubbleSort(array);
@@ -31,18 +32,5 @@ public class BubbleSort {
                 // Thread.sleep(100);
             }
         }
-    }
-
-    private static int[] fillRandom() {
-        int size = (int) (Math.random() * 10) + 1; //1-10
-        int[] array = new int[size];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 20) + 1; //1-20
-        }
-        return array;
-    }
-
-    private static void print(int[] array) {
-        System.out.println(Arrays.toString(array));
     }
 }

@@ -1,10 +1,11 @@
 package examples.sort;
 
-import java.util.Arrays;
+import static examples.sort.Helper.fillRandom;
+import static examples.sort.Helper.print;
 
 public class SelectionSort {
     public static void main(String[] args) {
-        int[] array2 = fillRandom();
+        int[] array2 = fillRandom(1, 20, 10);
         print(array2);
         long startTime2 = System.currentTimeMillis();
         selectionSort(array2);
@@ -27,18 +28,5 @@ public class SelectionSort {
                 // Thread.sleep(100);
             }
         }
-    }
-
-    private static int[] fillRandom() {
-        int size = (int) (Math.random() * 10) + 1;//1-10
-        int[] array = new int[size];
-        for (int i = 0; i < size; i++) {
-            array[i] = (int) (Math.random() * 19) + 2;//2-20
-        }
-        return array;
-    }
-
-    private static void print(int[] array) {
-        System.out.println(Arrays.toString(array));
     }
 }
