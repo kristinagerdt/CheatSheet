@@ -2,6 +2,7 @@ package stream.methods;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -10,7 +11,8 @@ public class BuildStream {
         // best practice
         Collection<Integer> collection = Arrays.asList(4, 5, 7, 6, 1);
         Stream<Integer> streamFromCollection = collection.stream();
-        // System.out.println(streamFromCollection.collect(Collectors.toList()));
+        System.out.println(streamFromCollection.collect(Collectors.toList()));
+
         Stream<Integer> parallelStreamFromCollection = collection.parallelStream();
 
         Integer[] array = new Integer[]{4, 5, 7, 8, 9, 6, 1};
@@ -18,12 +20,12 @@ public class BuildStream {
 
         IntStream streamFromString = "temp".chars();
 
-        IntStream streamOfIntStream = IntStream.range(0, 10);
+        IntStream streamFromIntStreamRange = IntStream.range(0, 10);
 
-        Stream<Integer> streamFromValues = Stream.of(1, 2, 3, 4);
+        Stream<Integer> streamFromStreamOf = Stream.of(1, 2, 3, 4);
 
-        Stream.builder().add("a1").add("a2").add("a3").build();
+        Stream<Object> streamFromStreamBuilder = Stream.builder().add("a1").add("a2").add("a3").build();
 
-        Stream<String> streamFromGenerate = Stream.generate(() -> "a1");
+        Stream<String> streamFromStreamGenerate = Stream.generate(() -> "a1");
     }
 }
