@@ -18,5 +18,19 @@ public class Convert {
                 .collect(Collectors.toList());
         System.out.println("doubleToInt = " + doubleToInt);
 
+        // convert to List<String> from String
+        List<String> stringList = "input"
+                .chars()
+                .mapToObj(c -> (char) c)
+                .map(String::valueOf)
+                .collect(Collectors.toList());
+        System.out.println("stringList = " + stringList);
+
+        // convert to List<Character> from String
+        List<Character> characterList = "input"
+                .chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.toList());
+        System.out.println("characterList = " + characterList);
     }
 }
