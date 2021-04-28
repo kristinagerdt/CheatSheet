@@ -191,6 +191,19 @@ public class Hello {
                 .flatMapToInt(p -> Arrays.stream(p))
                 .forEach(System.out::println);
 
+        int[][] accounts = new int[][]{{2, 8, 7}, {7, 1, 3}, {1, 9, 5}};
+
+        int maxWealth = 0;
+        int temp = 0;
+        for (int i = 0; i < accounts.length; i++) {
+            for (int j = 0; j < accounts[i].length; j++) {
+                temp += accounts[i][j];
+            }
+            if (temp > maxWealth) maxWealth = temp;
+            temp = 0;
+        }
+        System.out.println("maximum wealth: " + maxWealth);
+
         //! normal print 2d array, two dimensional array
         System.out.println(Arrays.deepToString(table));
     }
