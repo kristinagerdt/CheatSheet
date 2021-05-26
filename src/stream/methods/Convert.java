@@ -1,5 +1,6 @@
 package stream.methods;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,5 +33,13 @@ public class Convert {
                 .mapToObj(c -> (char) c)
                 .collect(Collectors.toList());
         System.out.println("characterList = " + characterList);
+
+        // convert to List<Integer> from array int
+        int[] numbersArray = new int[]{2, 3, 5, 1, 3};
+        List<Integer> integerList = Arrays
+                .stream(numbersArray)
+                .boxed()
+                .collect(Collectors.toList());
+        System.out.println("integerList = " + integerList);
     }
 }

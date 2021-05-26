@@ -1,7 +1,10 @@
 package stream.methods;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.IntStream;
+
+import static java.util.Arrays.asList;
 
 public class Range {
     public static void main(String[] args) {
@@ -24,6 +27,13 @@ public class Range {
                 .min()
                 .orElse(1);
         System.out.println("smallestDiv = " + smallestDiv);
+
+        // get the odd IntStream where i % 2 == 0
+        IntStream oddIntStream = IntStream
+                .range(0, array.length)
+                .filter(i -> i % 2 == 0)
+                .map(i -> array[i]);
+        oddIntStream.forEach(System.out::println);
 
         // get the new IntStream where new i=i*i
         IntStream newIntStream = IntStream
