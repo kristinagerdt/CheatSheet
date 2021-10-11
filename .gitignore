@@ -8,6 +8,7 @@
 .idea/
 out/
 .PVS-Studio/
+.DS_Store
 
 # Compiled class file
 *.class
